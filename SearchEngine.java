@@ -35,14 +35,14 @@ class Handler implements URLHandler {
                     }
                     String result = "";
                     for(int y = 0; y < matchWords.size(); y++){
-                        result += matchWords.get(y);
+                        result += matchWords.get(y) + " ";
                     }
                     matchWords.clear();
                     return String.format("%s", result);
                 }
             }
             else if(url.getPath().contains("/size")){
-                return String.format(" %d", words.size());
+                return String.format("%d", words.size());
             }
             return "404 Not Found";
         }
